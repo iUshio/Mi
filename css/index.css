@@ -1,0 +1,186 @@
+/* 主页（index.html）样式 */
+
+/* 顶部导航条容器 */
+.top-wrapper{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #333;
+}
+
+/* 设置超链接样式 */
+.topbar a{
+    font-size: 12px;
+    color: #b0b0b0;
+    display: block;
+}
+
+/* 设置超链接移入效果 */
+.topbar a:hover{
+    color: #fff;
+}
+
+/* 设置分割线颜色 */
+.topbar .line{
+    font-size: 12px;
+    margin: 0 8px;
+    color: #424242;
+}
+
+/* 设置左侧导航栏 */
+.service , .topbar li{
+    float: left;
+}
+
+.app{
+    position: relative;
+}
+
+/* 设置app下的小三角 */
+.app::after{
+    display: none;
+    content: '';
+    /* 设置绝对定位 */
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    /* 去除上边框 */
+    border-top: none;
+    /* 单独设置下边框颜色 */
+    border-bottom-color: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.app:hover .qrcode,
+.app:hover::after{
+    display: block;
+    height: 148px;
+}
+
+/* 设置qrcode码 */
+.app .qrcode{
+    width: 124px;
+    height: 0px;
+    overflow: hidden;
+    /* 开启绝对定位，不去影响父元素大小与定位 */
+    position: absolute;
+    left: -40px;
+    line-height: 1;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+
+    /* 设置展示qrcode动画 */
+    transition: height 0.3s linear;
+}
+
+
+/* 设置二维码图片 */
+.app .qrcode img {
+    width: 90px;
+    margin: 17px;
+    margin-bottom: 10px;
+}
+
+
+/* 设置二维码文字 */
+.app .qrcode span{
+    font-size: 14px;
+    color: #333;
+}
+
+/* 右侧导航栏 */
+.shop-car , .user-info{
+    float: right;
+}
+
+/* 设置购物车 */
+.shop-car a{
+    width: 120px;
+    margin-left: 25px;
+    /* 水平居中 */
+    text-align: center;
+    background-color: #424242;
+}
+
+/* 购物车下拉框 */
+.shop-car .shopcart{
+    width: 350px;
+    height: 0px;
+    overflow: hidden;
+    /* 设置绝对定位不对父元素大小位置进行影响 */
+    position: absolute;
+    right: 136px;
+    text-align: center;
+    line-height: 100px;
+    background-color: #fff;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
+    transition: height 0.3s;
+}
+
+/* 购物车下拉框文字 */
+.shopcart > span{
+    font-size: 16px;
+}
+
+/* 购物车移入事件 */
+.shop-car:hover a{
+    background-color: #fff;
+    color: #333;
+}
+
+.shop-car:hover .shopcart{
+    height: 100px;
+}
+
+.shop-car i{
+    margin-right: 2px;
+}
+
+/* 设置头部的header */
+
+.header{
+    height: 100px;
+    background-color: #bfa;
+}
+
+.header .logo{
+    float: left;
+    margin-top: 22px;
+    width: 55px;
+    height: 55px;
+    position: relative;
+    overflow: hidden;
+    /* 隐藏logo的文字 */
+    text-indent: -9999px;
+}
+
+.header .logo:hover .home{
+    left: 0px;
+}
+
+.header .logo:hover .mi{
+    left: 55px;
+}
+
+/* 设置头部logo */
+.header .logo a{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    left: 0;
+    background-color: #ff670f;
+    background-image: url('../img/mi-logo.png');
+    background-position: center;
+    transition: all 0.3s;
+}
+
+.header .logo .home{
+    left: -55px;
+    background-image: url('../img/mi-home.png');
+}
+

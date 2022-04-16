@@ -1,0 +1,26 @@
+/* 公共样式 */
+.clearfix::before,
+.clearfix::after{
+    display: table;
+    clear: both;
+    content: '';
+}
+/* 去除a的下划线 */
+a{
+    text-decoration: none;
+    color:#333;
+}
+
+/* 统一网页字体 */
+body{
+    font:14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    color: #333;
+    /* 限制缩放的最小宽度 */
+    min-width: 1226px;
+}
+
+/* 专门设计一个类用来表示中间容器的宽度 */
+.w{
+    width: 1226px;
+    margin: 0 auto;
+}
