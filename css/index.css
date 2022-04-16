@@ -76,6 +76,7 @@
 
     /* 设置展示qrcode动画 */
     transition: height 0.3s linear;
+    z-index: 9999;
 }
 
 
@@ -120,6 +121,7 @@
     background-color: #fff;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
     transition: height 0.3s;
+    z-index: 9999;
 }
 
 /* 购物车下拉框文字 */
@@ -142,17 +144,20 @@
 }
 
 /* 设置头部的header */
+.header-wrapper{
+    position: relative;
+}
 
 .header{
     height: 100px;
-    background-color: #bfa;
 }
 
 .header .logo{
     float: left;
     margin-top: 22px;
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
     position: relative;
     overflow: hidden;
     /* 隐藏logo的文字 */
@@ -170,8 +175,8 @@
 /* 设置头部logo */
 .header .logo a{
     position: absolute;
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     left: 0;
     background-color: #ff670f;
     background-image: url('../img/mi-logo.png');
@@ -183,4 +188,98 @@
     left: -55px;
     background-image: url('../img/mi-home.png');
 }
+
+/* 设置头部中间导航条 */
+.header .nav-wrapper{
+    float: left;
+}
+
+.header .nav{
+    height: 100px;
+    line-height: 100px;
+    padding-left: 65px;
+    background-color: white;
+}
+
+/* 设置里面的li */
+.nav-wrapper li{
+    float: left;
+}
+
+/* li字体调整 */
+.nav-wrapper li a{
+    display: block;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.nav-wrapper li a:hover{
+    color: #ff6700;
+}
+
+/* 隐藏商品 */
+.all-goods{
+    visibility: hidden;
+}
+
+/* 设置头部隐藏层 */
+.nav .goods-info{
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: #fff;
+    transition: height 0.3s;
+    z-index: 9999;
+}
+
+.nav .show-goods:hover ~ .goods-info,
+.goods-info:hover {
+    height: 228px;
+    border-top: 1px solid rgb(224, 224, 224);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
+}
+
+/* 搜索框容器 */
+.search-wrapper{
+    width: 296px;
+    height: 50px;
+    float: right;
+    background-color: #fff;
+    border: 1px solid rgb(224, 224, 224);
+    margin-top: 25px;
+}
+
+/* 搜索框输入栏 */
+.search-wrapper .search-inp{
+    width: 224px;
+    height: 50px;
+    padding: 0;
+    padding: 0 10px;
+    border: none;
+    float: left;
+    font-size: 20px;
+}
+
+/* 设置输入框获取焦点后的样式 */
+.search-wrapper .search-inp:focus,
+.search-wrapper .search-inp:focus + .search-btn{
+    outline: 1px solid #ff6700;
+}
+
+/* 搜索框搜索按钮 */
+.search-wrapper .search-btn{
+    width: 52px;
+    height: 50px;
+    padding: none;
+    border: none;
+    border-left: 1px solid #dddd;
+    float: left;
+    background-color: #fff;
+    color: #616161;
+    font-size: 16px;
+}
+
 
