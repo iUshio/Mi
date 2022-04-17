@@ -116,6 +116,8 @@
     /* 设置绝对定位不对父元素大小位置进行影响 */
     position: absolute;
     right: 136px;
+    /* margin-right: -83px; */
+
     text-align: center;
     line-height: 100px;
     background-color: #fff;
@@ -202,8 +204,13 @@
 }
 
 /* 设置里面的li */
-.nav-wrapper li{
+.nav > li{
     float: left;
+}
+
+/* 所有商品 */
+.all-goods-wrapper{
+    position: relative;
 }
 
 /* li字体调整 */
@@ -282,4 +289,182 @@
     font-size: 16px;
 }
 
+/* 设置左侧导航条样式 */
+.left-menu{
+    width: 234px;
+    height: 420px;
+    padding: 20px 0;
+    line-height: 1;
+    position: absolute;
+    z-index: 999;
+    left: -125px;
+    background-color: rgba(0, 0, 0, .6);
+}
 
+.left-menu li a{
+    height: 42px;
+    padding: 0 20px;
+    margin-right: 0;
+    display: block;
+    line-height: 42px;
+    color: #fff;
+}
+
+.left-menu li a:hover{
+    color: #fff;
+    background-color: #ff6700;
+}
+
+.left-menu a i {
+    line-height: 42px;
+    float: right;
+    font-size: 20px;
+}
+
+/* 设置banner */
+.banner{
+    height: 460px;
+    position: relative;
+}
+
+.banner .img-list li{
+    position: absolute;
+}
+
+.banner img{
+    width: 100%;
+}
+
+
+/* 设置导航点 */
+.pointer{
+    position: absolute;
+    bottom: 22px;
+    right: 35px;
+}
+
+.pointer a{
+    width: 10px;
+    height: 10px;
+    float: left;
+    margin-left: 6px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.pointer a:hover,
+.pointer a.active{
+    outline: 4px rgba(255, 255, 255, .6) solid;
+    background-color: #fff;
+}
+
+/* 设置切换图片箭头 */
+.pre-next a{
+    width: 40px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url('../img/icon-slides.png');
+}
+
+.pre-next .pre{
+    left: 234px;
+    background-position: -84px 0;
+}
+
+.pre-next .pre:hover{
+    background-position: 0;
+}
+
+.pre-next .next{
+    right: 0;
+    background-position: -125px 0;
+}
+
+.pre-next .next:hover{
+    background-position: -42px 0;
+}
+
+/* 设置下部广告区域 */
+.ad{
+    height: 170px;
+    margin-top: 14px;
+}
+
+.ad .shortcut,
+.ad .ad-img,
+.ad li{
+    float: left;
+}
+
+/* 左侧的快捷方式 */
+.ad .shortcut{
+    width: 234px;
+    height: 170px;
+    margin-right: 14px;
+    background-color: #5f5750;
+}
+
+.ad .shortcut a{
+    width: 76px;
+    height: 64px;
+    padding-top: 10px;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    color: #cfccca;
+}
+
+.ad .shortcut li{
+    position: relative;
+    margin-top: 10px;
+}
+
+/* 设置上边框 */
+.ad .shortcut li:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3))::before{
+    content: '';
+    width: 65px;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    background-color: rgba(114, 114, 114, 0.6);
+}
+
+.ad .shortcut li::after{
+    content: '';
+    width: 1px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    background-color: rgba(114, 114, 114, 0.6);
+}
+
+.ad .shortcut a:hover{
+    color: #fff;
+}
+
+.ad .shortcut a i{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+/* 设置左侧图片 */
+.ad .ad-img li{
+    width: 316px;
+    margin-right: 15px;
+}
+
+.ad .ad-img li:last-child{
+    margin-right: 0;
+}
+
+.ad .ad-img img{
+    width: 100%;
+    vertical-align: top;
+}
